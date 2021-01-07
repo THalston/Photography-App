@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class="Photography_App.Theme.DefaultTheme">
+
+    <!-- Colours -->
+    <Color x:Key="BackgroundColour">#FFFFFF</Color>
+    <Color x:Key="ColourWhite">#FFFFFF</Color>
+    <Color x:Key="ColourBlack">#000000</Color>
+    <Color x:Key="ColourGrey">#686868</Color>
+    <Color x:Key="ColourPrimary">#348CCB</Color>
+    <Color x:Key="ColourSecondary">#E64B65</Color>
+
+    <!-- Font Sizes -->
+    <!--H1-->
+    <OnPlatform  x:Key="FontSizeH1" x:TypeArguments="x:Double">
+        <On Platform="Android" Value="35" />
+        <On Platform="iOS" Value="35" />
+    </OnPlatform>
+    <!--H2-->
+    <OnPlatform  x:Key="FontSizeH2" x:TypeArguments="x:Double">
+        <On Platform="Android" Value="28" />
+        <On Platform="iOS" Value="28" />
+    </OnPlatform>
+    <!--H3-->
+    <OnPlatform  x:Key="FontSizeH3" x:TypeArguments="x:Double">
+        <On Platform="Android" Value="18" />
+        <On Platform="iOS" Value="18" />
+    </OnPlatform>
+    <!--H4-->
+    <OnPlatform  x:Key="FontSizeH4" x:TypeArguments="x:Double">
+        <On Platform="Android" Value="16" />
+        <On Platform="iOS" Value="16" />
+    </OnPlatform>
+
+    <!--region FONT STYLES-->
+
+    <!--BOLD-->
+    <OnPlatform  x:Key="FontBold" x:TypeArguments="FontAttributes">
+        <On Platform="Android" Value="Bold" />
+        <On Platform="iOS" Value="Bold" />
+    </OnPlatform>
+
+    <!--BODY COPY UNDERLINE-->
+    <OnPlatform  x:Key="FontUnderline" x:TypeArguments="TextDecorations">
+        <On Platform="Android" Value="Underline" />
+        <On Platform="iOS" Value="Underline" />
+    </OnPlatform>
+
+    <!--#endregion FONT STYLES-->
+    
+    <!-- Layout Styles -->
+
+    <Style TargetType="StackLayout" Class="MainLayout">
+        <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColour}" />
+    </Style>
+
+
+    <!-- #region Styles -->
+    <!-- Button Styles-->
+    <!--DEFAULT BUTTON--><!--
+    <Style TargetType="Button" Class="DefaultButton">
+        <Setter Property="BackgroundColor" Value="{StaticResource ColourWhite}" />
+        <Setter Property="TextColor" Value="{StaticResource ColourGrey7}" />
+        <Setter Property="FontSize" Value="{StaticResource FontSizeBodyCopy}" />
+        <Setter Property="FontAttributes" Value="{StaticResource FontBold}" />
+        <Setter Property="Margin" Value="5" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="Padding" Value="10,0,10,0" />
+    </Style>
+    --><!--END OF DEFAULT BUTTON-->
+
+    <!--PRIMARYBUTTON--><!--
+    <Style TargetType="Button" Class="PrimaryButton">
+        <Setter Property="BackgroundColor" Value="{StaticResource ColourPrimary}" />
+        <Setter Property="TextColor" Value="{StaticResource ColourWhite}" />
+        <Setter Property="FontSize" Value="{StaticResource FontSizeBodyCopy}" />
+        <Setter Property="FontAttributes" Value="{StaticResource FontBold}" />
+        <Setter Property="Margin" Value="5" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="Padding" Value="10,0,10,0" />
+    </Style>
+    --><!--END OF PRIMARY BUTTON-->
+
+    <!--SINGLE ACTION BUTTON WITH ICON-->
+    <!--SET TARGET ICON IN XAML PAGE--><!--
+    <Style TargetType="Frame" Class="SingleActionIconButton">
+        <Setter Property="BackgroundColor" Value="{StaticResource ColourPrimary}" />
+        <Setter Property="Margin" Value="{OnPlatform iOS=10, Android=10}" />
+        <Setter Property="CornerRadius" Value="{OnPlatform iOS=30, Android=20}" />
+        <Setter Property="WidthRequest" Value="{OnPlatform iOS=60, Android=40}" />
+        <Setter Property="HeightRequest" Value="{OnPlatform iOS=60, Android=40}" />
+        <Setter Property="AbsoluteLayout.LayoutFlags" Value="PositionProportional" />
+        <Setter Property="AbsoluteLayout.LayoutBounds" Value="1, 1, AutoSize, AutoSize" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="HorizontalOptions" Value="End" />
+        --><!--This property can be overwritten in Xaml page (Start, Center & End)--><!--
+        <Setter Property="HasShadow" Value="True" />
+    </Style>
+    --><!--END OF SINGLE ACTION BUTTON WITH ICON-->
+
+    <!--SINGLE ACTION BUTTON-->
+    <!--FOR USE WHEN ICON IS NOT NEEDED WITHIN ACTION BUTTON--><!--
+    <Style TargetType="Button" Class="SingleActionButton">
+        <Setter Property="BackgroundColor" Value="{StaticResource ColourPrimary}" />
+        <Setter Property="TextColor" Value="{StaticResource ColourWhite}" />
+        <Setter Property="FontSize" Value="{OnPlatform iOS=22, Android=14}" />
+        <Setter Property="Text" Value="+" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="Margin" Value="{OnPlatform iOS=10, Android=10}" />
+        <Setter Property="CornerRadius" Value="{OnPlatform iOS=30, Android=20}" />
+        <Setter Property="WidthRequest" Value="{OnPlatform iOS=60, Android=40}" />
+        <Setter Property="HeightRequest" Value="{OnPlatform iOS=60, Android=40}" />
+        <Setter Property="AbsoluteLayout.LayoutFlags" Value="PositionProportional" />
+        <Setter Property="AbsoluteLayout.LayoutBounds" Value="1, 1, AutoSize, AutoSize" />
+    </Style>
+    --><!--END OF SINGLE ACTION BUTTON-->
+
+    <!-- End of Button Styles-->
+
+    <!--Default Componennt Styling --><!--
+
+    <Style TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource ColourGrey7}" />
+    </Style>
+    <Style TargetType="Label" Class="InputLabel">
+        <Setter Property="TextColor" Value="{StaticResource ColourGrey5}" />
+        <Setter Property="FontSize" Value="{StaticResource FontSizeSmallBodyCopy}" />
+        <Setter Property="Margin" Value="{OnPlatform iOS='10,0,0,0', Android='10,0,0,0'}" />
+    </Style>
+    <Style TargetType="Label" Class="LabelWhite">
+        <Setter Property="TextColor" Value="{StaticResource ColourWhite}" />
+        <Setter Property="FontSize" Value="{StaticResource FontSizeSmallBodyCopy}" />
+        <Setter Property="Margin" Value="{OnPlatform iOS='10,0,0,0', Android='10,0,0,0'}" />
+    </Style>
+    <Style TargetType="Label" Class="NavigationTitle">
+        <Setter Property="TextColor" Value="{OnPlatform Android={StaticResource ColourWhite}, iOS={StaticResource ColourBlack}}"/>
+        <Setter Property="FontSize" Value="{OnPlatform Android={StaticResource FontSizeH5}, iOS={StaticResource FontSizeH5}}"/>
+        <Setter Property="FontAttributes" Value="{StaticResource FontBold}"/>
+        <Setter Property="HorizontalOptions" Value="{OnPlatform Android='StartAndExpand', iOS='CenterAndExpand'}" />
+        <Setter Property="VerticalOptions" Value="Center" />
+    </Style>
+    <Style TargetType="Entry">
+        <Setter Property="TextColor" Value="{StaticResource ColourGrey7}" />
+        <Setter Property="PlaceholderColor" Value="{StaticResource ColourGrey5}" />
+        <Setter Property="Margin" Value="{OnPlatform iOS='10,0,10,0', Android='10,0,10,0'}" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup Name="EntryCommonStates">
+                    <VisualState Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="PlaceholderColor" Value="{StaticResource ColourGrey5}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState Name="Focused">
+                        <VisualState.Setters>
+                            <Setter Property="PlaceholderColor" Value="{StaticResource ColourGrey7}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+    <Style TargetType="Entry" Class="PasswordEntry">
+        <Setter Property="IsPassword" Value="True" />
+        <Setter Property="TextColor" Value="{StaticResource ColourGrey7}" />
+        <Setter Property="PlaceholderColor" Value="{StaticResource ColourGrey5}" />
+        <Setter Property="Placeholder" Value="Password" />
+        <Setter Property="Margin" Value="{OnPlatform iOS='10,0,10,0', Android='10,0,10,0'}" />
+    </Style>
+    <Style TargetType="Editor">
+        <Setter Property="TextColor" Value="{OnPlatform iOS={DynamicResource ColourGrey7}, Android={DynamicResource ColourGrey7}}" />
+        <Setter Property="PlaceholderColor" Value="{OnPlatform iOS={DynamicResource ColourGrey5}, Android={DynamicResource ColourGrey5}}" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup Name="EditorCommonStates">
+                    <VisualState Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="PlaceholderColor" Value="{OnPlatform iOS={DynamicResource ColourGrey5}, Android={DynamicResource ColourGrey5}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState Name="Focused">
+                        <VisualState.Setters>
+                            <Setter Property="PlaceholderColor" Value="{OnPlatform iOS={DynamicResource ColourGrey7}, Android={DynamicResource ColourGrey7}}" />
+                            <Setter Property="HeightRequest" Value="100" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+    <Style TargetType="CheckBox">
+        <Setter Property="Color" Value="{StaticResource ColourPrimary}" />
+    </Style>
+    <Style TargetType="Switch">
+        <Setter Property="ThumbColor" Value="{StaticResource ColourPrimary}" />
+        <Setter Property="OnColor" Value="{StaticResource ColourPrimaryOpacity75}" />
+    </Style>
+    <Style TargetType="ProgressBar">
+        <Setter Property="ProgressColor" Value="{StaticResource ColourPrimary}" />
+        <Setter Property="Margin" Value="5" />
+    </Style>
+    <Style TargetType="ActivityIndicator">
+        <Setter Property="Color" Value="{StaticResource ColourPrimary}" />
+        <Setter Property="Margin" Value="5" />
+    </Style>
+    <Style TargetType="SearchBar">
+        <Setter Property="TextColor" Value="{OnPlatform iOS={DynamicResource ColourGrey7}, Android={DynamicResource ColourGrey7}}" />
+        <Setter Property="PlaceholderColor" Value="{OnPlatform iOS={DynamicResource ColourGrey5}, Android={DynamicResource ColourGrey5}}" />
+        <Setter Property="CancelButtonColor" Value="{OnPlatform iOS={DynamicResource ColourGrey7}, Android={DynamicResource ColourGrey7}}" />
+        <Setter Property="BackgroundColor" Value="{OnPlatform  Android={DynamicResource BackgroundColour}}" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="Margin" Value="{OnPlatform Android='-10,0,0,0', iOS='0'}" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup Name="SearchBarCommonStates">
+                    <VisualState Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="PlaceholderColor" Value="{StaticResource ColourGrey5}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState Name="Focused">
+                        <VisualState.Setters>
+                            <Setter Property="PlaceholderColor" Value="{StaticResource ColourGrey7}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+    <Style TargetType="Slider">
+        <Setter Property="ThumbColor" Value="{StaticResource ColourPrimary}" />
+        <Setter Property="MinimumTrackColor" Value="{StaticResource ColourPrimary}" />
+        <Setter Property="MaximumTrackColor" Value="{StaticResource ColourGrey4}" />
+    </Style>
+    <Style TargetType="Frame">
+        <Setter Property="HasShadow" Value="False" />
+    </Style>
+    <Style TargetType="BoxView" Class="Divider">
+        <Setter Property="BackgroundColor" Value="{StaticResource ColourGrey3}" />
+        <Setter Property="HeightRequest" Value="1" />
+    </Style>
+    <Style TargetType="BoxView" Class="DividerBrand">
+        <Setter Property="BackgroundColor" Value="{StaticResource ColourPrimary}" />
+        <Setter Property="HeightRequest" Value="1" />
+    </Style>
+    --><!--End of Default Componennt Styling -->
+
+    <!-- #endregion Styles --><!--
+
+    <Style TargetType="StackLayout" Class="MainLayout">
+        <Setter Property="BackgroundColor" Value="{StaticResource ColourPrimary}" />
+        <Setter Property="Padding" Value="{OnPlatform Android='10,2,10,2', iOS='10,6,10,6'}" />
+    </Style>
+    
+    --><!--#region CUSTOM CONTROLS-->
+
+
+    <!--BOTTOM MENU STYLING--><!--
+    <Style TargetType="Frame" Class="BottomMenuContainer">
+        <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColour}" />
+        <Setter Property="Padding" Value="{OnPlatform Android='10,2,10,2', iOS='10,6,10,6'}" />
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="Margin" Value="-3,0,-3,-1" />
+        <Setter Property="BorderColor" Value="{StaticResource ColourGrey3}" />
+        <Setter Property="HasShadow" Value="False" />
+    </Style>
+    --><!-- END OF BOTTOM MENU STYLING-->
+
+    <!--FLOATING MESSAGE STYLING--><!--
+    <Style TargetType="StackLayout" Class="FloatingMessageRedContainer">
+        <Setter Property="Padding" Value="15" />
+        <Setter Property="BackgroundColor" Value="{StaticResource ColourRed1}" />
+    </Style>
+    <Style TargetType="StackLayout" Class="FloatingMessageGreyContainer">
+        <Setter Property="Padding" Value="15" />
+        <Setter Property="BackgroundColor" Value="{StaticResource ColourGrey6}" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="VerticalOptions" Value="End" />
+    </Style>
+    <Style TargetType="Label" Class="FloatingMessageTitle">
+        <Setter Property="TextColor" Value="{StaticResource ColourWhite}" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="VerticalOptions" Value="Start" />
+        <Setter Property="Margin" Value="0,0,-10,0" />
+        <Setter Property="Grid.ColumnSpan" Value="2" />
+    </Style>
+    <Style TargetType="Label" Class="FloatingMessageAction">
+        <Setter Property="FontAttributes" Value="{StaticResource FontBold}" />
+        <Setter Property="TextColor" Value="{StaticResource ColourWhite}" />
+        <Setter Property="HorizontalOptions" Value="End" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="Margin" Value="0,0,-20,0" />
+        <Setter Property="Grid.Column" Value="2" />
+    </Style>
+    --><!--END OF FLOATING MESSAGE STYLING-->
+
+    <!--#endregion CUSTOM COMPONENETS-->
+
+
+</ResourceDictionary>
