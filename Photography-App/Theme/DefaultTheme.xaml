@@ -32,7 +32,7 @@
         <On Platform="Android" Value="16" />
         <On Platform="iOS" Value="16" />
     </OnPlatform>
-
+ 
     <!--region FONT STYLES-->
 
     <!--BOLD-->
@@ -48,11 +48,20 @@
     </OnPlatform>
 
     <!--#endregion FONT STYLES-->
-    
+
     <!-- Layout Styles -->
 
     <Style TargetType="StackLayout" Class="MainLayout">
         <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColour}" />
+    </Style>
+
+    <Style TargetType="StackLayout" Class="MyProfileImageCollection">
+        <Setter Property="Padding" Value="0,-10,0,0" />
+    </Style>
+
+    <Style TargetType="Label" Class="CardText" >
+        <Setter Property="TextColor" Value="{DynamicResource ColourGrey}" />
+        <Setter Property="FontSize" Value="{DynamicResource FontSizeH4}" />
     </Style>
 
 
