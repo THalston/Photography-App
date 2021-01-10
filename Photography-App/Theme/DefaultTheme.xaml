@@ -8,6 +8,8 @@
     <Color x:Key="ColourWhite">#FFFFFF</Color>
     <Color x:Key="ColourBlack">#000000</Color>
     <Color x:Key="ColourGrey">#686868</Color>
+    <Color x:Key="ColourGreyOpacity50">#B4B4B5</Color>
+    <Color x:Key="ColourGreyOpacity75">#D9D9D8</Color>
     <Color x:Key="ColourPrimary">#348CCB</Color>
     <Color x:Key="ColourSecondary">#E64B65</Color>
 
@@ -32,7 +34,12 @@
         <On Platform="Android" Value="16" />
         <On Platform="iOS" Value="16" />
     </OnPlatform>
- 
+    <!--H5-->
+    <OnPlatform  x:Key="FontSizeH5" x:TypeArguments="x:Double">
+        <On Platform="Android" Value="14" />
+        <On Platform="iOS" Value="14" />
+    </OnPlatform>
+
     <!--region FONT STYLES-->
 
     <!--BOLD-->
@@ -55,15 +62,27 @@
         <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColour}" />
     </Style>
 
-    <Style TargetType="StackLayout" Class="MyProfileImageCollection">
+    <Style TargetType="StackLayout" Class="ScrollLayout">
+        <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColour}" />
+        <Setter Property="Padding" Value="-5,-15,-5,0" />
+    </Style>
+
+    <Style TargetType="StackLayout" Class="MyProfileImageCard">
         <Setter Property="Padding" Value="0,-10,0,0" />
     </Style>
 
     <Style TargetType="Label" Class="CardText" >
         <Setter Property="TextColor" Value="{DynamicResource ColourGrey}" />
-        <Setter Property="FontSize" Value="{DynamicResource FontSizeH4}" />
+        <Setter Property="FontSize" Value="{DynamicResource FontSizeH5}" />
+        <Setter Property="Padding" Value="5,0,5,5" />
     </Style>
 
+    <Style TargetType="Frame" Class="Card">
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="BackgroundColor" Value="{DynamicResource ColourWhite}"/>
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="HasShadow" Value="True" />
+    </Style>
 
     <!-- #region Styles -->
     <!-- Button Styles-->

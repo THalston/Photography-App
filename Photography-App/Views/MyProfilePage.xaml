@@ -4,7 +4,8 @@
              x:Class="Photography_App.Views.MyProfilePage"
              xmlns:vm="clr-namespace:Photography_App.ViewModels"
              xmlns:custom="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
-             Title="{Binding Title}">
+             Title="{Binding Title}"
+             Visual="Material">
     
     <ContentPage.BindingContext>
         <vm:MyProfileViewModel />
@@ -51,31 +52,60 @@
         </RelativeLayout>
  
         <StackLayout Grid.Row="1" BackgroundColor="{DynamicResource BackgroundColour}">
-            <custom:PancakeView>
-            <ScrollView Orientation="Vertical">
+            <ScrollView StyleClass="ScrollLayout" Orientation="Vertical">
             <Grid Padding="20,20,20,15"
                   HorizontalOptions="FillAndExpand">
-                        <custom:PancakeView CornerRadius="5" >
-                            <StackLayout StyleClass="MyProfileImageCollection" Grid.Column="0" Grid.Row="0">
-                                <Image Source="Lamb_Vindaloo.jpg" WidthRequest="200" HeightRequest="200"/>
-                            <Label Text="test" StyleClass="CardText"/>
-                        </StackLayout>
-                        </custom:PancakeView>
-                        <StackLayout StyleClass="MyProfileImageCollection" Grid.Column="1" Grid.Row="0">
-                            <Image Source="Lamb_Vindaloo.jpg" WidthRequest="200" HeightRequest="200"/>
-                            <Label Text="test" StyleClass="CardText"/>
-                        </StackLayout>
-                        <StackLayout StyleClass="MyProfileImageCollection" Grid.Column="0" Grid.Row="1">
-                            <Image Source="Lamb_Vindaloo.jpg" WidthRequest="200" HeightRequest="200"/>
-                            <Label Text="test" StyleClass="CardText"/>
-                        </StackLayout>
-                        <StackLayout StyleClass="MyProfileImageCollection" Grid.Column="1" Grid.Row="1">
-                            <Image Source="Lamb_Vindaloo.jpg" WidthRequest="200" HeightRequest="200"/>
-                            <Label Text="test" StyleClass="CardText"/>
-                        </StackLayout>
+                        <Frame Grid.Column="0" Grid.Row="0" StyleClass="Card">
+                            <StackLayout StyleClass="MyProfileImageCard">
+                                <Image Source="Lamb_Vindaloo.jpg" WidthRequest="200" HeightRequest="200" Aspect="AspectFill"/>
+                                <Label Text="Lamb Vindaloo" StyleClass="CardText"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame Grid.Column="1" Grid.Row="0" StyleClass="Card">
+                            <StackLayout StyleClass="MyProfileImageCard">
+                                <Image Source="Poppadoms.jpg" WidthRequest="200" HeightRequest="200" Aspect="AspectFill"/>
+                                <Label Text="Poppadoms" StyleClass="CardText"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame Grid.Column="0" Grid.Row="1" StyleClass="Card">
+                            <StackLayout StyleClass="MyProfileImageCard">
+                                <Image Source="JMC_Beer.jpg" WidthRequest="200" HeightRequest="200" Aspect="AspectFill"/>
+                                <Label Text="Lager" StyleClass="CardText"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame Grid.Column="1" Grid.Row="1" StyleClass="Card">
+                            <StackLayout StyleClass="MyProfileImageCard">
+                                <Image Source="Rice.jpg" WidthRequest="200" HeightRequest="200" Aspect="AspectFill"/>
+                                <Label Text="Rice" StyleClass="CardText"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame Grid.Column="0" Grid.Row="2" StyleClass="Card">
+                            <StackLayout StyleClass="MyProfileImageCard">
+                                <Image Source="Lamb_Vindaloo.jpg" WidthRequest="200" HeightRequest="200" Aspect="AspectFill"/>
+                                <Label Text="Lamb Vindaloo" StyleClass="CardText"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame Grid.Column="1" Grid.Row="2" StyleClass="Card">
+                            <StackLayout StyleClass="MyProfileImageCard">
+                                <Image Source="Poppadoms.jpg" WidthRequest="200" HeightRequest="200" Aspect="AspectFill"/>
+                                <Label Text="Poppadoms" StyleClass="CardText"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame Grid.Column="0" Grid.Row="3" StyleClass="Card">
+                            <StackLayout StyleClass="MyProfileImageCard">
+                                <Image Source="JMC_Beer.jpg" WidthRequest="200" HeightRequest="200" Aspect="AspectFill"/>
+                                <Label Text="Lager" StyleClass="CardText"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame Grid.Column="1" Grid.Row="3" StyleClass="Card">
+                            <StackLayout StyleClass="MyProfileImageCard">
+                                <Image Source="Rice.jpg" WidthRequest="200" HeightRequest="200" Aspect="AspectFill"/>
+                                <Label Text="Rice" StyleClass="CardText"/>
+                            </StackLayout>
+                        </Frame>
                     </Grid>
             </ScrollView>
-            </custom:PancakeView>
+
         </StackLayout>
 
     </StackLayout>
