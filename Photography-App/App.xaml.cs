@@ -15,6 +15,7 @@ namespace Photography_App
 
             DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
+            Sharpnado.Tabs.Initializer.Initialize(true, false);
         }
 
         protected override void OnStart()

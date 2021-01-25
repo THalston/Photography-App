@@ -4,35 +4,38 @@
              x:Class="Photography_App.Views.MyProfilePage"
              xmlns:vm="clr-namespace:Photography_App.ViewModels"
              xmlns:custom="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:tabs="http://sharpnado.com"
              Title="{Binding Title}"
              Visual="Material">
-    
+
     <ContentPage.BindingContext>
         <vm:MyProfileViewModel />
     </ContentPage.BindingContext>
 
-    <ScrollView Orientation="Vertical" >
-        <StackLayout StyleClass="MainLayout">
-            <RelativeLayout Grid.Row="0">
-                <custom:PancakeView>
-                    <Grid>
-                        <Image Source="Space_01.jpg" HeightRequest="230" Aspect="AspectFill"/>
-                        <StackLayout Padding="10,13,10,10">
-                            <Grid ColumnDefinitions="auto" RowDefinitions="auto">
-                            <Ellipse Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="160" HeightRequest="160" Fill="White" Opacity="0.4"/>
-                            <Image Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="150" HeightRequest="150" Source="red_dwarf_lister.jpg">
-                                <Image.Clip>
-                                        <EllipseGeometry Center="75,75" RadiusX="75" RadiusY="75"/>
-                                </Image.Clip>
-                            </Image>
-                            <Label Text="Dave Lister" TextColor="{DynamicResource ColourWhite}" FontSize="{DynamicResource FontSizeH3}" VerticalOptions="Center" HorizontalOptions="Center" Padding="0,-5,0,-5" Grid.Column="1" Grid.Row="1" />
-                            <Label Text="Outer Space" TextColor="{DynamicResource ColourWhite}" FontSize="{DynamicResource FontSizeH4}" VerticalOptions="Center" HorizontalOptions="Center" Padding="0,-5,0,0" Grid.Column="1" Grid.Row="2" />
-                            </Grid>
-                        </StackLayout>
-                    </Grid>
-                </custom:PancakeView>
-            </RelativeLayout> 
-            <StackLayout Grid.Row="1" BackgroundColor="{DynamicResource BackgroundColour}">
+    <Grid>
+
+        <ScrollView Orientation="Vertical" >
+            <StackLayout StyleClass="MainLayout">
+                <RelativeLayout Grid.Row="0">
+                    <custom:PancakeView>
+                        <Grid>
+                            <Image Source="Space_01.jpg" HeightRequest="230" Aspect="AspectFill"/>
+                            <StackLayout Padding="10,13,10,10">
+                                <Grid ColumnDefinitions="auto" RowDefinitions="auto">
+                                    <Ellipse Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="160" HeightRequest="160" Fill="White" Opacity="0.4"/>
+                                    <Image Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="150" HeightRequest="150" Source="red_dwarf_lister.jpg">
+                                        <Image.Clip>
+                                            <EllipseGeometry Center="75,75" RadiusX="75" RadiusY="75"/>
+                                        </Image.Clip>
+                                    </Image>
+                                    <Label Text="Dave Lister" TextColor="{DynamicResource ColourWhite}" FontSize="{DynamicResource FontSizeH3}" VerticalOptions="Center" HorizontalOptions="Center" Padding="0,-5,0,-5" Grid.Column="1" Grid.Row="1" />
+                                    <Label Text="Outer Space" TextColor="{DynamicResource ColourWhite}" FontSize="{DynamicResource FontSizeH4}" VerticalOptions="Center" HorizontalOptions="Center" Padding="0,-5,0,0" Grid.Column="1" Grid.Row="2" />
+                                </Grid>
+                            </StackLayout>
+                        </Grid>
+                    </custom:PancakeView>
+                </RelativeLayout>
+                <StackLayout Grid.Row="1" BackgroundColor="{DynamicResource BackgroundColour}">
                     <Grid Padding="20,20,20,15" HorizontalOptions="FillAndExpand">
                         <Frame Grid.Column="0" Grid.Row="0" StyleClass="Card">
                             <StackLayout StyleClass="MyProfileImageCard">
@@ -83,7 +86,32 @@
                             </StackLayout>
                         </Frame>
                     </Grid>
+                </StackLayout>
             </StackLayout>
-        </StackLayout>
-    </ScrollView>
+        </ScrollView>
+        
+        <AbsoluteLayout HorizontalOptions="CenterAndExpand" VerticalOptions="End">
+            <BoxView StyleClass="Divider" />
+            <tabs:TabHostView x:Name="TabHost"  
+                    BackgroundColor="White"
+                    TabType="Fixed">
+                <tabs:TabHostView.Tabs>
+                    <tabs:BottomTabItem 
+                            Label="Home" />
+                    <tabs:BottomTabItem                            
+                            Label="Tabs_List" />
+                    <tabs:TabButton ButtonBackgroundColor="{StaticResource ColourSecondary}"
+                        ButtonCircleSize="60"
+                        ButtonPadding="25"
+                        Scale="1.1"
+                        TranslationY="-10"/>
+                    <tabs:BottomTabItem
+                            Label="Grid" />
+                    <tabs:BottomTabItem 
+                            Label="Home" />
+                </tabs:TabHostView.Tabs>
+            </tabs:TabHostView>
+        </AbsoluteLayout>
+
+    </Grid>
 </ContentPage>

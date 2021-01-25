@@ -84,6 +84,11 @@
         <Setter Property="HasShadow" Value="True" />
     </Style>
 
+    <Style TargetType="BoxView" Class="Divider">
+        <Setter Property="BackgroundColor" Value="{StaticResource ColourPrimary}" />
+        <Setter Property="HeightRequest" Value="1" />
+    </Style>
+
     <!-- #region Styles -->
     <!-- Button Styles-->
     <!--DEFAULT BUTTON--><!--
@@ -266,10 +271,6 @@
     </Style>
     <Style TargetType="BoxView" Class="Divider">
         <Setter Property="BackgroundColor" Value="{StaticResource ColourGrey3}" />
-        <Setter Property="HeightRequest" Value="1" />
-    </Style>
-    <Style TargetType="BoxView" Class="DividerBrand">
-        <Setter Property="BackgroundColor" Value="{StaticResource ColourPrimary}" />
         <Setter Property="HeightRequest" Value="1" />
     </Style>
     --><!--End of Default Componennt Styling -->
