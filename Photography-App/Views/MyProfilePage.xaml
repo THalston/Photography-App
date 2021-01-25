@@ -5,6 +5,7 @@
              xmlns:vm="clr-namespace:Photography_App.ViewModels"
              xmlns:custom="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              xmlns:tabs="http://sharpnado.com"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
              Title="{Binding Title}"
              Visual="Material">
 
@@ -89,22 +90,22 @@
                 </StackLayout>
             </StackLayout>
         </ScrollView>
-        
-        <AbsoluteLayout HorizontalOptions="CenterAndExpand" VerticalOptions="End">
-            <BoxView StyleClass="Divider" />
+
+        <AbsoluteLayout HorizontalOptions="CenterAndExpand" VerticalOptions="End" >
             <tabs:TabHostView x:Name="TabHost"  
-                    BackgroundColor="White"
+                    BackgroundColor="{StaticResource ColourWhite}"
                     TabType="Fixed">
                 <tabs:TabHostView.Tabs>
                     <tabs:BottomTabItem 
-                            Label="Home" />
+                            Label="Home and some stuff" />
                     <tabs:BottomTabItem                            
                             Label="Tabs_List" />
                     <tabs:TabButton ButtonBackgroundColor="{StaticResource ColourSecondary}"
-                        ButtonCircleSize="60"
-                        ButtonPadding="25"
-                        Scale="1.1"
-                        TranslationY="-10"/>
+                        IconImageSource="camera_white.png"            
+                        ButtonCircleSize="45"
+                        ButtonPadding="6"
+                        Scale="1.3"
+                        TranslationY="-5"/>
                     <tabs:BottomTabItem
                             Label="Grid" />
                     <tabs:BottomTabItem 
