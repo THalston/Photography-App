@@ -10,51 +10,30 @@
     <ContentPage.BindingContext>
         <vm:MyProfileViewModel />
     </ContentPage.BindingContext>
-      
-    <StackLayout StyleClass="MainLayout">
-        <RelativeLayout Grid.Row="0">
-            <custom:PancakeView>
-                <Grid>
-                    <Image Source="Space_01.jpg" HeightRequest="230" HorizontalOptions="Fill" VerticalOptions="Start"/>
-                    <StackLayout Padding="10,13,10,10">
-                        <Grid ColumnDefinitions="auto"
-                              RowDefinitions="auto">
-                        <Ellipse
-                            Grid.Row="0"
-                            Grid.Column="1"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"
-                            WidthRequest="160"
-                            HeightRequest="160"
-                            Fill="White"
-                            Opacity="0.4"/>
-                        <Image
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center"
-                        WidthRequest="150"
-                        HeightRequest="150"        
-                        Source="red_dwarf_lister.jpg">
-                            <Image.Clip>
-                                <EllipseGeometry
-                            Center="75,75"
-                            RadiusX="75"
-                            RadiusY="75"/>
-                            </Image.Clip>
-                        </Image>
-                        <Label Text="Dave Lister" TextColor="{DynamicResource ColourWhite}" FontSize="{DynamicResource FontSizeH3}" VerticalOptions="Center" HorizontalOptions="Center" Padding="0,-5,0,-5" Grid.Column="1" Grid.Row="1" />
+
+    <ScrollView Orientation="Vertical" >
+        <StackLayout StyleClass="MainLayout">
+            <RelativeLayout Grid.Row="0">
+                <custom:PancakeView>
+                    <Grid>
+                        <Image Source="Space_01.jpg" HeightRequest="230" Aspect="AspectFill"/>
+                        <StackLayout Padding="10,13,10,10">
+                            <Grid ColumnDefinitions="auto" RowDefinitions="auto">
+                            <Ellipse Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="160" HeightRequest="160" Fill="White" Opacity="0.4"/>
+                            <Image Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="150" HeightRequest="150" Source="red_dwarf_lister.jpg">
+                                <Image.Clip>
+                                        <EllipseGeometry Center="75,75" RadiusX="75" RadiusY="75"/>
+                                </Image.Clip>
+                            </Image>
+                            <Label Text="Dave Lister" TextColor="{DynamicResource ColourWhite}" FontSize="{DynamicResource FontSizeH3}" VerticalOptions="Center" HorizontalOptions="Center" Padding="0,-5,0,-5" Grid.Column="1" Grid.Row="1" />
                             <Label Text="Outer Space" TextColor="{DynamicResource ColourWhite}" FontSize="{DynamicResource FontSizeH4}" VerticalOptions="Center" HorizontalOptions="Center" Padding="0,-5,0,0" Grid.Column="1" Grid.Row="2" />
-                        </Grid>
-                    </StackLayout>
-                </Grid>
-            </custom:PancakeView>
-        </RelativeLayout>
- 
-        <StackLayout Grid.Row="1" BackgroundColor="{DynamicResource BackgroundColour}">
-            <ScrollView StyleClass="ScrollLayout" Orientation="Vertical">
-            <Grid Padding="20,20,20,15"
-                  HorizontalOptions="FillAndExpand">
+                            </Grid>
+                        </StackLayout>
+                    </Grid>
+                </custom:PancakeView>
+            </RelativeLayout> 
+            <StackLayout Grid.Row="1" BackgroundColor="{DynamicResource BackgroundColour}">
+                    <Grid Padding="20,20,20,15" HorizontalOptions="FillAndExpand">
                         <Frame Grid.Column="0" Grid.Row="0" StyleClass="Card">
                             <StackLayout StyleClass="MyProfileImageCard">
                                 <Image Source="Lamb_Vindaloo.jpg" WidthRequest="200" HeightRequest="200" Aspect="AspectFill"/>
@@ -104,11 +83,7 @@
                             </StackLayout>
                         </Frame>
                     </Grid>
-            </ScrollView>
-
+            </StackLayout>
         </StackLayout>
-
-    </StackLayout>
-
-
+    </ScrollView>
 </ContentPage>
