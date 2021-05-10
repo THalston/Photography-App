@@ -4,6 +4,7 @@
              x:Class="Photography_App.Views.MyProfilePage"
              xmlns:vm="clr-namespace:Photography_App.ViewModels"
              xmlns:custom="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:controls="clr-namespace:Photography_App.Controls"
              xmlns:tabs="http://sharpnado.com"
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
              Title="{Binding Title}"
@@ -90,38 +91,10 @@
                 </StackLayout>
             </StackLayout>
         </ScrollView>
-        
-        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="End" Padding="0,0,0,-1" >
-            <StackLayout HorizontalOptions="FillAndExpand" HeightRequest="3" TranslationY="6" BackgroundColor="{StaticResource ColourPrimary}" />
-            <tabs:TabHostView x:Name="TabHost"  
-                    BackgroundColor="{StaticResource ColourWhite}"
-                    TabType="Fixed">
-                <tabs:TabHostView.Tabs>
-                    <tabs:BottomTabItem 
-                        IconImageSource="icon_home.png"
-                        Label="Home"
-                        Scale="0.9"/>
-                    <tabs:BottomTabItem                            
-                        IconImageSource="icon_favourite.png"
-                        Label="Favourites"
-                        Scale="0.9"/>
-                    <tabs:TabButton ButtonBackgroundColor="{StaticResource ColourSecondary}"
-                        IconImageSource="camera_white.png"            
-                        ButtonCircleSize="45"
-                        ButtonPadding="6"
-                        Scale="1.3"
-                        TranslationY="-10"/>
-                    <tabs:BottomTabItem
-                        IconImageSource="icon_search.png"
-                        Label="Search"
-                        Scale="0.9"/>
-                    <tabs:BottomTabItem 
-                        IconImageSource="icon_profile.png"
-                        Label="Profile"
-                        Scale="0.9"/>
-                </tabs:TabHostView.Tabs>
-            </tabs:TabHostView>
-        </StackLayout>
 
+        <StackLayout ClassId="Menu" VerticalOptions="End">
+            <controls:Menu></controls:Menu>
+        </StackLayout>
+        
     </Grid>
 </ContentPage>

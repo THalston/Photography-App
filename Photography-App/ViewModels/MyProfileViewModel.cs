@@ -10,9 +10,6 @@ namespace Photography_App.ViewModels
         public MyProfileViewModel()
         {
             Title = "My Profile";
-            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
         }
-
-        public ICommand OpenWebCommand { get; }
     }
 }

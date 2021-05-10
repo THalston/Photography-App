@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:tabs="http://sharpnado.com"
+             x:Class="Photography_App.Controls.Menu">
+    
+
+        <StackLayout  HorizontalOptions="FillAndExpand" VerticalOptions="End" Padding="0,0,0,-1" >
+            <StackLayout HorizontalOptions="FillAndExpand" HeightRequest="3" TranslationY="6" BackgroundColor="{StaticResource ColourPrimary}" />
+            <tabs:TabHostView x:Name="TabHost"  
+                    BackgroundColor="{StaticResource ColourWhite}"
+                    TabType="Fixed">
+                <tabs:TabHostView.Tabs>
+                    <tabs:TabButton 
+                            IconImageSource="icon_home.png"
+                            Clicked="Menu_HomeButton_OnClicked"
+                            Scale="0.8"/>
+                    <tabs:TabButton                            
+                            IconImageSource="icon_favourite.png"
+                            Clicked="Menu_FavouritesButton_OnClicked"
+                            Scale="0.8"/>
+                    <tabs:TabButton ButtonBackgroundColor="{StaticResource ColourSecondary}"
+                            IconImageSource="camera_white.png"            
+                            ButtonCircleSize="45"
+                            ButtonPadding="6"
+                            Scale="1.3"
+                            TranslationY="-10"/>
+                    <tabs:TabButton
+                            IconImageSource="icon_search.png"
+                            Clicked="Menu_SearchButton_OnClicked"
+                            Scale="0.8"/>
+                    <tabs:TabButton 
+                            IconImageSource="icon_profile.png"
+                            Clicked="Menu_MyProfileButton_OnClicked"
+                            Scale="0.8"/>
+            </tabs:TabHostView.Tabs>
+            </tabs:TabHostView>
+        </StackLayout>
+
+    
+</StackLayout>
